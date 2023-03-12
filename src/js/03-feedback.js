@@ -43,11 +43,11 @@ function onFormSubmit(event) {
    const { email, message } = event.currentTarget.elements;
    console.log({ email: email.value.trim(), message: message.value.trim() });
 
-// - прибираємо повідомлення зі сховища
+// - очищуємо форму
     event.currentTarget.reset();
     formData = {};
 
-// - очищуємо форму
+// - прибираємо значення зі сховища
     localStorage.removeItem(STORAGE_KEY);
 };
 

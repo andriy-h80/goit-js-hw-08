@@ -12,10 +12,9 @@ function getPlayedTime (currentTime) {
     localStorage.setItem(CURRENT_TIME_KEY, JSON.stringify(playedTime));
 };
 
-player.setCurrentTime(JSON.parse(localStorage.getItem(CURRENT_TIME_KEY)));
+player.setCurrentTime(JSON.parse(localStorage.getItem(CURRENT_TIME_KEY)) || 0);
   
 // ???????
-//
 // player.getVideoTitle().then(function(title) {
 //     console.log('title:', title);
 // });
